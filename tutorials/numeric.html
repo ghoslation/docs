@@ -81,7 +81,13 @@
               data: 'price_eur',
               type: 'numeric',
               numericFormat: {
-                pattern: '0,0.00 $',
+                pattern: {
+                  output:'currency',
+                  spaceSeparated: true,
+                  currencyPosition: "postfix",
+                  thousandSeparated: true,
+                  mantissa: 0
+                },
                 culture: 'de-DE' // use this for EUR (German),
                 // more cultures available on http://numbrojs.com/languages.html
               }
